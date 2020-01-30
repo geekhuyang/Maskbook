@@ -31,6 +31,7 @@
     "uninstall": "node scripts/postinstall.js",
     "lint": "eslint src/ --ext .ts,.tsx --fix",
     "lint:report": "eslint src/ --ext .ts,.tsx --format junit -o reports/junit/eslint-results.xml",
+    "lint:typecoverage": "type-coverage -p tsconfig.json --ignore-catch --strict",
     "compile:contracts": "./scripts/contracts.sh"
   },
   "dependencies": {
@@ -149,6 +150,7 @@
     "ts-morph": "^6.0.2",
     "ts-node": "^8.5.0",
     "ttypescript": "^1.5.7",
+    "type-coverage": "^2.4.0",
     "typechain": "^1.0.3",
     "typechain-target-web3-v1": "^1.0.4",
     "web-ext": "^4.0.0",
