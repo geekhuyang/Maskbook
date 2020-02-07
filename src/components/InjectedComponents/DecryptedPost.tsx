@@ -82,7 +82,7 @@ function DecryptPostSuccessHeader(props: { shareMenu: ReturnType<typeof useShare
             {ShareMenu}
             <span className={classes.addRecipientsTitle}>{geti18nString('decrypted_postbox_title')}</span>
             <Box flex={1} />
-            {props.requestAppendRecipients && (
+            {props.requestAppendRecipients && props.alreadySelectedPreviously.length > 0 && (
                 <Link color="primary" onClick={showShare} className={classes.addRecipientsLink}>
                     {geti18nString('decrypted_postbox_add_recipients')}
                 </Link>
